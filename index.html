@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon"  type="image/png" href="kitob-olami.logo.png">
+<title> Kitob Olami</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#0b1220;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav h1{
+    color:red;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:red;
+}
+
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:600px;
+    opacity:0.8;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    background:red;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:35px;
+    color:red;
+}
+
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:30px;
+}
+
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#22c55e;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:10px 0;
+    opacity:0.8;
+}
+
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#0b1220;
+    margin-top:50px;
+    opacity:0.7;
+}
+.contact a{
+display:inline-block;
+margin:10px;
+padding:10px 18px;
+background:red;
+color:#1e293b;
+text-decoration:none;
+border-radius:8px;
+font-weight:600;
+transition:0.3s;
+}
+
+.contact a:hover{
+background:#1e293b;
+color:red;
+transform:translateY(-3px);
+box-shadow:0 6px 15px rgba(0,0,0,0.4);
+}
+@media (max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+padding:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.hero h2{
+font-size:32px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+section{
+padding:80px 5%;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.card img{
+height:220px;
+}
+
+.contact p{
+font-size:15px;
+}
+
+footer{
+font-size:14px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Uzun Kitob Olami</h1>
+    <ul>
+        <li><a href="#home">Bosh sahifa</a></li>
+        <li><a href="#about">Biz haqimizda</a></li>
+        <li><a href="#books">Kitoblar</a></li>
+        <li><a href="#contact">Aloqa</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <h2>Bilim sari bir qadam</h2>
+    <p>Uzun Kitob Olami – eng sara badiiy va ilmiy kitoblarni bir joyda jamlagan zamonaviy kitob do‘koni.</p>
+    <a href="#books" class="btn">Kitoblarni ko‘rish</a>
+</section>
+
+<!-- About -->
+<section id="about">
+    <h2 class="section-title">Biz haqimizda</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+        Uzun Kitob Olami kitob ixlosmandlari uchun tashkil etilgan maxsus do‘kon.
+        Biz sizga eng mashhur romanlar, motivatsion kitoblar va ilmiy asarlarni
+        qulay narxlarda taqdim etamiz.
+    </p>
+</section>
+
+<!-- Books -->
+<section id="books">
+    <h2 class="section-title">Mashhur Kitoblar</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="img-k.1.jpg" alt="">
+            <h3>Muvaffaqiyatli insonlarning 7 ko'nikmasi</h3>
+            <p>Muvaffaqiyatli insonlarning 7 ko‘nikmasi ilk nashridan
+               buyon 40 dan ortiq tilga tarjima qilinib, 40 million nusxadan
+               ortiq sotilgan. Yozilganiga 30 yil o‘tsa-da, hamon biznes va 
+               shaxsiy rivojlanishga doir bestseller asar maqomini saqlab kelmoqda.</p>
+            <div class="price">59.000 so'm</div>
+        </div>
+
+        <div class="card">
+            <img src="img-k.2.jpg" alt="">
+            <h3>Diqqat! Chalg‘ituvchi dunyoda muvaffaqiyat sirlari</h3>
+            <p>Elektron pochta-yu ijtimoiy tarmoqlar, qo‘yingki, barcha
+               aloqa vositalari diqqatimiz, e’tiborimiz va vaqtimiz o‘g‘risiga
+               aylandi. Chalg‘imay bir ish qilish og‘ir bo‘lib qolgan chalg‘ituvchi dunyoda qanday muvaffaqiyat qozonish mumkin? Nima qilsak, sarflagan vaqtimiz o‘zimizga kattaroq foyda bo‘lib qaytadi?
+               ᴊᴀᴠᴏʙɪɴɪ ᴋɪᴛᴏʙɴɪ ᴏ‘ǫɪʙ ᴛᴏᴘɪsʜɪɴɢɪᴢ ᴍᴜᴍᴋɪɴ</p>
+            <div class="price">47.000 so'm</div>
+        </div>
+
+        <div class="card">
+            <img src="img-k.3.jpg" alt="">
+            <h3>Mening hayotim</h3>
+            <p>20-asrning buyuk menejerlaridan biri, ishlab chiqarishda oqim-konveyer 
+                yo‘lini joriy etgan, AQSH avtomobil sanoatining otasi Henri Fordning
+                o‘zi bitgan uning bu hayotnomasi tarixiy qiymatidan tashqari, o‘z ishi 
+                hamda hayotini ijobiy o‘zgartirishga chog‘langan iqtisodchilar, injenerlar, 
+                konstruktorlar, ruhshunoslar, sotsiologlar, biznes tashkilotchilari va 
+                rahbarlari, hayotda muvaffaqiyatga erishaman degan har bir odam uchun kerakli asardir</p>
+            <div class="price">64.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.4.jpg" alt="">
+            <h3>Top sotuv sekretlari</h3>
+            <p>Ushbu kitob orqali biznesingizni va sotuvlaringizni keyingi darajaga olib
+                 chiquvchi bilimlarni olishingiz mumkin. Bu bilimlar Yer yuzining yirik 
+                 kompaniyalari «Facebook», «Google», “Sprint” va boshqa kompaniyalarni 
+                 gigant bo‘lishiga sababchi bo‘lgan bilimlarning o'zginasidir.Sotuvchilar 
+                 butun dunyoning aylanishiga sababchi bo‘ladigan kishilardir.</p>
+            <div class="price">33.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.5.jpg" alt="">
+            <h3>Million Dollarlik xatolar</h3>
+            <p>Har qanday biznes egasi yo‘l qo‘yadigan 40 ta xato. Bularning har
+                 bittasi biznesingizni poymol qilishi mumkin.</p>
+            <div class="price">75.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.6.jpg" alt="">
+            <h3>Qo'rqma</h3>
+            <p>Roman voqelarini qisqacha so‘zlar bilan ifoda etib bo‘lmaydi. Barchasi 
+                shu qadar tig‘izki, shoshirib qo‘yadi. Majoz, obraz, ifoda, o‘t, hech 
+                kimnikiga o‘xshamgan lirizmni his qilasiz. Milliyat, sof muhabbat, 
+                ko‘rinmas va oshkor fojialar, tarix, bugun va ertaning bir-biriga 
+                kavsharlangan xalqasi, rostlik da’vosidagi yolg‘onlar, ruh va qondagi 
+                paradokslar sizni o‘tmish va kelajak kuyiga asir qiladi, o‘ylatadi,
+                 yig‘latadi va achchiq-achchiq kuldiradi...</p>
+            <div class="price">44.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.7.jpg" alt="">
+            <h3>1984</h3>
+            <p> Jorj Oruellning “1984” asari “Newsweek” jurnali tomonidan tuzilgan 
+                “Insoniyat tarixidagi eng zo‘r 100 asar” reytingida ikkinchi, “BBC” 
+                tomonidan tuzilgan “Insoniyat tarixidagi eng zo‘r 200 kitob” 
+                reytingida sakkizchi o‘rinni egallagan. Asar 1949 yilda nashr 
+                etilgan bo‘lishiga qaramay haligacha o‘quvchilar orasida katta 
+                qiziqish bilan mutolaa qilinib kelinmoqda...</p>
+            <div class="price">36.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.8.jpg" alt="">
+            <h3>Intiqom</h3>
+            <p>XX asrning birinchi choragi o‘rtalari O‘rta Osiyo, ayniqsa, Buxoro 
+                amirligi uchun fojeiy kechgan edi. Rossiyada davlat to‘ntarishi 
+                yo‘li bilan hokimiyatga kelgan Sovetlar Turkistonning ko‘pgina 
+                qismini bosib olib, Xiva va Buxoroga ham ko‘z tikkan edi. 
+                Xorazm xonligi istilosidan keyin, 1920-yil 1-sentyabrda 
+                Buxoro amirligiga qarshi agressiya boshlab yuborildi....</p>
+            <div class="price">39.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.9.jpg" alt="">
+            <h3>Intiqom</h3>
+            <p>«Intiqom» asarining ikkinchi jildida arxiv hujjatlari asosida 
+                tarix badiiyati qalamga olinadi, hurriyat toliblari - ota-bobolarimiz 
+                siymolari, qurboshilar, botir yigitlarning jangovar harakatlardagi 
+                jasorati tasvirlanadi. Kuchlarning, qurollarining teng emasligida, 
+                oradagi sotqinlik dalolatlarida qarshilik kurashining intiho 
+                sababiyati chizgilari aksini topadi. Yaqin o‘tmishni manbalar
+                 asosida yorqin gavdalantirgan majmua tarix ixlosmandlariga mo‘ljallangan...</p>
+            <div class="price">39.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.10.jpg" alt="">
+            <h3>Uchgacha ayni vaqti</h3>
+            <p> Farzand chaqaloqligidan boshlab ulg‘aygunicha uning tarbiyasida 
+                nimalarga kechikmasligimiz kerak, nimalarga kechikib qo‘ydik, 
+                xatolarni tuzata olamizmi? Masaru Ibuka ko‘pincha ota-onalar 
+                ilg‘amagan, lekin bolaning ongi, ruhiyatida, jismonan va ma'nan 
+                shakllanishida hal qiluvchi rol o‘ynaydigan xatti-harakatlar, 
+                hayotdan olingan turfa jihatlarni ko‘zguda aks etganday siz-u bizga ko‘rsata olgan. 
+                ᴜsʜʙᴜ ᴋɪᴛᴏʙɴɪ ᴏ‘ǫɪʙ, ʙᴜɴɢᴀ ᴀᴍɪɴ ʙᴏ‘ʟᴀsɪᴢ ᴅᴇʙ ɪsʜᴏɴᴀᴍɪᴢ...</p>
+            <div class="price">39.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.11.jpg" alt="">
+            <h3>Uchdan keyin kech</h3>
+            <p>ʙᴏʟᴀɴɪɴɢ ᴏ‘ʀɢᴀɴɪsʜ ᴠᴀ ʀɪᴠᴏᴊʟᴀɴɪsʜ sᴀʟᴏʜɪʏᴀᴛɪ ᴇɴɢ ʏᴜᴋsᴀᴋ ʙᴏ‘ʟɢᴀɴ ᴅᴀᴠʀ
+                ᴅᴀsᴛʟᴀʙᴋɪ ᴜᴄʜ ʏɪʟᴅɪʀ. ꜰᴜʀsᴀᴛɴɪ ʙᴏʏ ʙᴇʀᴍᴀɴɢ! Har bir bolada bir daho yashirin.
+                Uning kim bo‘lib voyaga yetishi esa kattalarning munosabati, tarbiyasi mahsulidir.
+                Ushbu kitobda muallif sizni bunga ishontirishnigina maqsad qilib olmagan.
+                Kitobni o‘qib siz bola tarbiyasiga oid oddiy va tushunarli usullar bilan tanishasiz. 
+                Faqat bu borada kechikib qolmasligingiz lozim.ᴋɪᴛᴏʙ ᴏ‘ᴢ ꜰᴀʀᴢᴀɴᴅɪɴɪɴɢ ᴋᴇʟᴀᴊᴀɢɪ ᴜᴄʜᴜɴ 
+                ǫᴀʏɢ‘ᴜʀᴀᴅɪɢᴀɴ ʙᴀʀᴄʜᴀ ᴏᴛᴀ-ᴏɴᴀʟᴀʀɢᴀ ᴍᴏ‘ʟᴊᴀʟʟᴀɴɢᴀɴ.</p>
+            <div class="price">39.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.12.jpg" alt="">
+            <h3>Samaradorlikning 21 yo'li</h3>
+            <p>Dunyo bo‘ylab 1,5 milliondan ortiq nusxada sotilgan va 42 tilda tarjima qilingan 
+               Samaradorlikning 21 yo‘li kitobi hayotingizni butunlay o‘zgartirib yuboradi...
+               ʙʀᴀʏᴀɴ ᴛʀᴇʏsɪ ᴀʟᴏʜɪᴅᴀ sʜᴀxsʟᴀʀ ᴠᴀ ᴛᴀsʜᴋɪʟᴏᴛʟᴀʀɴɪ ᴏ‘ǫɪᴛɪsʜ ʜᴀᴍᴅᴀ ʀɪᴠᴏᴊʟᴀɴᴛɪʀɪsʜɢᴀ 
+               ɪxᴛɪsᴏsʟᴀsʜɢᴀɴ "ʙʀɪᴀɴ ᴛʀᴀᴄʏ ɪɴᴛᴇʀɴᴀᴛɪᴏɴᴀʟ" ᴋᴏᴍᴘᴀɴɪʏᴀsɪɴɪɴɢ ʙᴏsʜ ɪᴊʀᴏᴄʜɪ ᴅɪʀᴇᴋᴛᴏʀɪ.
+                ᴜ ᴀǫsʜ , ᴋᴀɴᴀᴅᴀ ᴠᴀ ᴅᴜɴʏᴏɴɪɴɢ 55 ᴅᴀᴠʟᴀᴛɪᴅᴀ ᴜᴍᴜᴍɪʏ 5 ᴍɪʟʟɪᴏɴᴅᴀɴ ᴢɪʏᴏᴅ ᴀᴜᴅɪᴛᴏʀɪʏᴀɢᴀ 
+                ᴍᴀ'ʀᴜᴢᴀ ᴏ‘ǫɪɢᴀɴ. 30 ʏɪʟ ᴅᴀᴠᴏᴍɪᴅᴀ ɪǫᴛɪsᴏᴅ, ᴛᴀʀɪx, ʙɪᴢɴᴇs, ꜰᴀʟsᴀꜰᴀ ᴠᴀ ᴘsɪxᴏʟᴏɢɪʏᴀ 
+                sᴏxᴀʟᴀʀɪᴅᴀ ᴛᴀᴅǫɪǫᴏᴛʟᴀʀ ᴏʟɪʙ ʙᴏʀɪʙ, ᴍᴀ'ʀᴜᴢᴀʟᴀʀ ᴛᴀʏʏᴏʀʟᴀɢᴀɴ...</p>
+            <div class="price">26.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.13.jpg" alt="">
+            <h3>Do'st orttirish va odamlarga ta'sir o'tkazish</h3>
+            <p>Yoqimli hamsuhbat bo'lish
+                Suqrotning sehrli nazariyasi
+                Maktub yozish san'ati
+                Mo'jizalar yaratish formulasi
+            </p>
+            <div class="price">13.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.14.jpg" alt="">
+            <h3>Bezovtalikdan xalos bo'lish va yangi hayot boshlash sirlari</h3>
+            <p>• ᴜʏǫᴜsɪᴢʟɪᴋ
+               • ᴄʜᴀʀᴄʜᴏǫ
+               • ᴢᴇʀɪᴋɪsʜᴅᴀɴ ꜰᴏʀɪɢ‘ ʙᴏ‘ʟɪsʜɴɪɴɢ sᴇʜʀʟɪ    ꜰᴏʀᴍᴜʟᴀsɪ 
+               • 14 ᴋᴜɴᴅᴀ ᴍᴇʟᴀɴxᴏɴɪʏᴀᴅᴀɴ ᴅᴀᴠᴏʟᴀɴɪsʜ
+               • ʙᴀxᴛɴɪɴɢ 7 ǫᴏɪᴅᴀsɪ</p>
+            <div class="price">13.000 so'm</div>
+        </div>
+        <div class="card">
+            <img src="img-k.15.jpg" alt="">
+            <h3>Bu yerda hamma narsa bo'lishi mumkin</h3>
+            <p> Zamonaviy adabiyotda hali-hamon turli tajribalar davom etmoqda,
+                o‘quvchilarga xilma-xil yo‘nalishlar va uslublardagi asarlar 
+                taqdim qilinmoqda. Shvetsariyalik taniqli yozuvchi Jianna
+                Molinarining ushbu kitobi ham ana shunday izlanishlar xosilasi hisoblanadi.
+                Yozuvchi birorta so‘zni behuda ishlatmaydi, har bir so‘z, kerak bo‘lsa 
+                har bir harf ostida o‘ziga xos ramz yashiringan...
+                ᴋɪᴛᴏʙ ᴀᴅᴀʙɪʏᴏᴛ ᴍᴜxʟɪsʟᴀʀɪɢᴀ ʜᴀǫɪǫɪʏ sᴏᴠɢ‘ᴀ ʙᴏ‘ʟᴀᴅɪ ᴅᴇɢᴀɴ ᴜᴍɪᴅᴅᴀᴍɪᴢ.</p>
+            <div class="price">40.000 so'm</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+    <h2 class="section-title">Aloqa</h2>
+    <p>📍 O'zbekiston, Surxondaryo, Uzun</p>
+    <p>📞 +998 90 111 58 45</p>
+    <p>    +998 91 514 17 71</p>
+    <p>    +998 20 001 25 16</p>
+    <p><a href="https://t.me/kitobolamigroup">Telegram guruhimiz</a></p>
+    <p><a href="https://t.me/kitobolami">Telegram kanalimiz</a></p>
+</section>
+
+<footer>
+    © 2026 Uzun Kitob Olami | Barcha huquqlar himoyalangan
+</footer>
+
+</body>
+</html>
